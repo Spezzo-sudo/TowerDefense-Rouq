@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cyberpunk Neon Glow Effects */
+@layer utilities {
+  .neon-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+
+  .neon-border {
+    border: 2px solid theme('colors.neon-cyan');
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+
+  .neon-button:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    background: rgba(0, 255, 255, 0.1);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: theme('colors.bg-dark');
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.neon-cyan');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.neon-magenta');
+}
+
+/* Prevent text selection during gameplay */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Canvas cursor */
+canvas {
+  cursor: crosshair;
+}
